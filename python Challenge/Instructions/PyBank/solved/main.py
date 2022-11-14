@@ -1,6 +1,8 @@
+#add our dependencies.
 import os
 import csv
 
+#Assign a variable to laod a file from a path
 main_csv = os.path.join('..','Resources','budget_data.csv')
 
 with open(main_csv,'r') as csvfile:
@@ -14,7 +16,9 @@ with open(main_csv,'r') as csvfile:
     greatestIncreaseInProfits = 0
     greatestDecreaseInProfits = 0
     
+    #Print each row in the CSV file.
     for row in csvreader:
+        #Print each row in the CSV file.
         rowCount = rowCount + 1
         print(rowCount+1)
         currentProfitLoss = int(row[1])
