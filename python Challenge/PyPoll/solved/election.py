@@ -5,8 +5,8 @@ import csv
 #Assign a variable to laod a file from a path
 main_csv = os.path.join('..','Resources','election_data.csv') 
 
-output_path = os.path.join("..", "analysis", "new.csv")
-f = open("C:\Users\xz4w1x\Desktop\Homework\python Challenge\Instructions\PyPoll\analysisel\ection_result.txt", "w")
+
+f = open("election_result.txt", "w")
 #Open the election results and read the file
 with open(main_csv,'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
