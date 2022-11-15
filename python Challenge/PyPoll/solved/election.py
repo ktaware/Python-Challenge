@@ -1,12 +1,19 @@
-#add our dependencies.
+# Create a Python script that analyzes the votes and calculates each of the following:
+# -->>  The total number of votes cast
+# -->>  A complete list of candidates who received votes
+# -->>  The percentage of votes each candidate won
+# -->>  The total number of votes each candidate won
+# -->>  The winner of the election based on popular vote
+# 
+# #add our dependencies.
 import os
 import csv
 
 #Assign a variable to laod a file from a path
 main_csv = os.path.join('..','Resources','election_data.csv') 
+fName = os.path.join("..","analysis","election_result.txt")
 
-
-f = open("election_result.txt", "w")
+f = open(fName, "w")
 #Open the election results and read the file
 with open(main_csv,'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
